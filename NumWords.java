@@ -6,7 +6,7 @@ int hundreds = (n%1000)/100;
 int tens = (n%100)/10;
 int units = n % 10;
 System.out.print(hundreds + " hundreds, ");
-System.out.print(tens + " tens,");
+System.out.print(tens + " tens, and ");
 System.out.print(units + " ones.");
 }
 }
