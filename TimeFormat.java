@@ -13,23 +13,23 @@ public class TimeFormat {
 		// Does the same with the minutes part of the input.
 		int minutes = Integer.parseInt("" + args[0].charAt(3) + args[0].charAt(4));
 		String ampm="";
-		String HoursDigit0 ="";
-		String minutesDigit0 ="";
-		if (hours < 12) {
+		String HoursDigit0 ="";//String to hold leading zero for hours below 10
+		String minutesDigit0 ="";//String to hold leading zero for minutes below 10
+		if (hours < 12) { //AM case
 			ampm = "AM";
-		} else {
-			if (!(hours == 12)) {
+		} else {	 //PM case
+			if (!(hours == 12)) { //special case for noon
 			     hours = hours - 12;	
 			}
 			ampm = "PM";
 		}
 
-		if (hours<10) {
+		if (hours<10) { //adds leading zero for hours below 10
            HoursDigit0 = "0";
 		}
-		if (minutes<10) {
+		if (minutes<10) { //adds leading zero for minutes below 10
 			minutesDigit0 = "0";
 		}
-		System.out.println("The time is " + HoursDigit0 + hours + " : " + minutesDigit0 + minutes + " " + ampm);
+		System.out.println(HoursDigit0 + hours + ":" + minutesDigit0 + minutes + " " + ampm);
 	}
 }
